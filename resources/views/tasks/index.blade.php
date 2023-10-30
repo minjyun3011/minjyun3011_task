@@ -25,15 +25,27 @@
 
     <hr>
     <h1>新規論文投稿</h1>
+    @if ($errors->any())
+        <div class="error">
+            <p>
+                <b>【エラー内容】</b>
+            </p>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <form action="{{ route('tasks.store') }}" method="post">
         @csrf
         <p>
             <label for="title">タイトル</label><br>
-            <input type="text" name="title" id="title" value="{{ old('title') }}">
+            <input type="text" name="title" id="title" value="{{ old('title', $memo->title) }}">
         </p>
         <p>
             <label for="body">内容</label><br>
-            <textarea name="body" class="body" id="body">{{ old('body') }}</textarea>
+            <textarea name="body" class="body" id="body">{{ old('body', $memo->body) }}</textarea>
         </p>
 
         <input type="submit" value="Create Task">
