@@ -7,7 +7,7 @@ use App\Http\Requests\TaskRequest;
 
 class TaskController extends Controller
 {
-    public function index(TaskRequest $request)
+    public function index()
     {
         $tasks = Task::all();
         return view('tasks.index', ['tasks' => $tasks]);

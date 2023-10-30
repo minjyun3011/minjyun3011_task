@@ -41,11 +41,11 @@
         @csrf
         <p>
             <label for="title">タイトル</label><br>
-            <input type="text" name="title" id="title" value="{{ old('title', $memo->title) }}">
+            <input type="text" name="title" id="title" value="{{ old('title') }}">
         </p>
         <p>
             <label for="body">内容</label><br>
-            <textarea name="body" class="body" id="body">{{ old('body', $memo->body) }}</textarea>
+            <textarea name="body" class="body" id="body">{{ old('body')}}</textarea>
         </p>
 
         <input type="submit" value="Create Task">

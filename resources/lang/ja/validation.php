@@ -148,7 +148,7 @@ return [
         'area'                     => 'エリア',
         'available'                => '利用可能',
         'birthday'                 => '誕生日',
-        'body'                     => '本文',
+        'body'                     => '内容',
         'city'                     => '市',
         'content'                  => 'コンテンツ',
         'country'                  => '国',
@@ -213,5 +213,7 @@ return [
         'updated_at'               => '更新日',
         'username'                 => 'ユーザー名',
         'year'                     => '年',
+        'thesis-title'             => '論文タイトル',
+        'thesis-contents'           => '本文'
     ],
 ];

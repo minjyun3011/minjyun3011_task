@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.body {
+    width: 300px;
+    height: 100px;
+}
+
+.button-group {
+    display: flex;
+}
+.button-group2 {
+    display: flex;
+}
+
+.button-group>*:not(:last-child) {
+    margin-right: 10px;
+}
+.button-group2>*:not(:last-child) {
+    margin-right: 0px;
+}
