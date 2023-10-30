@@ -25,15 +25,15 @@
 
     <hr>
     <h1>新規論文投稿</h1>
-    <form action="{{ route('tasks.store', $task) }}" method="post">
+    <form action="{{ route('tasks.store') }}" method="post">
         @csrf
         <p>
             <label for="title">タイトル</label><br>
-            <input type="text" name="title" id="title">
+            <input type="text" name="title" id="title" value="{{ old('title') }}">
         </p>
         <p>
             <label for="body">内容</label><br>
-            <textarea name="body" class="body" id="body"></textarea>
+            <textarea name="body" class="body" id="body">{{ old('body') }}</textarea>
         </p>
 
         <input type="submit" value="Create Task">
