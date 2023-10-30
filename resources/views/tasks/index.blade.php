@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>localhost/tasks</title>
+    <title>localhost/tasks/index</title>
 </head>
 
 <body>
@@ -15,8 +15,9 @@
     @endforeach
     <hr>
     <h1>新規論文投稿</h1>
-    <form action="{{ route('tasks.store') }}" method="post">
+    <form action="{{ route('tasks.store', $task) }}" method="post">
         @csrf
+        @method('PATCH')
         <p>
             <label for="title">タイトル</label><br>
             <input type="text" name="title" id="title">
