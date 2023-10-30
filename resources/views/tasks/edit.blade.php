@@ -33,12 +33,13 @@
         <p>
             <textarea name="body" class="body" id="body">{{ $task->body }}</textarea>
         </p>
-        <div class="button-group">
-            <input type="submit" value="更新">
-            <form action="{{ route('tasks.show', $task) }}">
-                <input type="submit" value="詳細に戻る">
-            </form>
-        </div>
+
+        <input type="submit" value="更新">
+    </form>
+
+    <button onclick='location.href="{{ route(tasks.show", $task) }}"'>詳細へ戻る</button>
+
+
 </body>
 
 </html>
